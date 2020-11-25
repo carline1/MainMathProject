@@ -1,0 +1,14 @@
+D:\Desktop\GitHub\MainMathProject\MainMathProject\bin\Debug\MainMathProject.exe.config
+D:\Desktop\GitHub\MainMathProject\MainMathProject\bin\Debug\MainMathProject.exe
+D:\Desktop\GitHub\MainMathProject\MainMathProject\bin\Debug\MainMathProject.pdb
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.csprojAssemblyReference.cache
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.Properties.Resources.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.csproj.GenerateResource.cache
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.csproj.CoreCompileInputs.cache
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.exe
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.pdb
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.CorrelationForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.InputNForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.InputXForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.InputYForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.ReliabilityForm.resources
