@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cor_field = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.r_label = new System.Windows.Forms.Label();
             this.hyp_test = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.comparison_t = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cor_field)).BeginInit();
             this.SuspendLayout();
             // 
             // cor_field
             // 
             this.cor_field.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.Name = "ChartArea1";
-            this.cor_field.ChartAreas.Add(chartArea3);
+            chartArea2.Name = "ChartArea1";
+            this.cor_field.ChartAreas.Add(chartArea2);
             this.cor_field.Location = new System.Drawing.Point(369, 64);
             this.cor_field.Name = "cor_field";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Name = "point";
-            this.cor_field.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Name = "point";
+            this.cor_field.Series.Add(series2);
             this.cor_field.Size = new System.Drawing.Size(707, 428);
             this.cor_field.TabIndex = 0;
             this.cor_field.Text = "chart1";
@@ -68,7 +69,7 @@
             // 
             this.hyp_test.AutoSize = true;
             this.hyp_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hyp_test.Location = new System.Drawing.Point(42, 179);
+            this.hyp_test.Location = new System.Drawing.Point(42, 225);
             this.hyp_test.Name = "hyp_test";
             this.hyp_test.Size = new System.Drawing.Size(165, 24);
             this.hyp_test.TabIndex = 2;
@@ -78,6 +79,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(620, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 31);
@@ -88,6 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(41, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 25);
@@ -98,17 +101,29 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(41, 140);
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(41, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(192, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Проверка гипотез";
+            // 
+            // comparison_t
+            // 
+            this.comparison_t.AutoSize = true;
+            this.comparison_t.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comparison_t.Location = new System.Drawing.Point(42, 260);
+            this.comparison_t.Name = "comparison_t";
+            this.comparison_t.Size = new System.Drawing.Size(154, 24);
+            this.comparison_t.TabIndex = 5;
+            this.comparison_t.Text = "<t табл и t набл>";
             // 
             // CorrelationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 504);
+            this.Controls.Add(this.comparison_t);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,5 +147,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label comparison_t;
     }
 }

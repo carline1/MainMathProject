@@ -31,8 +31,6 @@ namespace MainMathProject
         {
             if (y_text.Text == "")
                 error.Show();
-            else if (Int32.Parse(y_text.Text) < 1)
-                error.Show();
             else
             {
                 error.Hide();

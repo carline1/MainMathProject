@@ -26,8 +26,6 @@ namespace MainMathProject
         {
             if (x_text.Text == "")
                 error.Show();
-            else if (Int32.Parse(x_text.Text) < 1)
-                error.Show();
             else
             {
                 error.Hide();

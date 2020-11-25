@@ -75,9 +75,15 @@ namespace MainMathProject
             }
             t_observ = (double)(r * Math.Sqrt(n - 2) / (double)(Math.Sqrt(1 - Math.Pow(r, 2))));
             if (Math.Abs(t_observ) > t_table)
+            {
                 hyp_test.Text = "Между X и Y существует тесная связь";
+                comparison_t.Text = $"|t набл| > t табл \n({Math.Abs(t_observ)} > { t_table})";
+            }
             else
+            {
                 hyp_test.Text = "Между X и Y связи нет";
+                comparison_t.Text = $"|t набл| < t табл \n({Math.Abs(t_observ)} < { t_table})";
+            }
         }
 
         protected void SetForm_Closed(object sender, EventArgs e)
