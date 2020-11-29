@@ -73,6 +73,7 @@
             this.Controls.Add(this.rel95);
             this.Name = "ReliabilityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);
             this.Text = "Выбор надежности";
             this.ResumeLayout(false);
             this.PerformLayout();

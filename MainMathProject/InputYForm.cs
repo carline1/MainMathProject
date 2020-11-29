@@ -13,8 +13,8 @@ namespace MainMathProject
     public partial class InputYForm : Form
     {
 
-        public int[] y_mass;
-        public int[] x_mass;
+        public double[] y_mass;
+        public double[] x_mass;
 
         public InputYForm(InputXForm input_x)
         {
@@ -22,7 +22,7 @@ namespace MainMathProject
             success.Hide();
             error.Hide();
             x_mass = input_x.x_mass;
-            y_mass = new int[input_x.x_mass.Length];
+            y_mass = new double[input_x.x_mass.Length];
         }
 
         int y_iterator = 0;        
@@ -35,7 +35,7 @@ namespace MainMathProject
             {
                 error.Hide();
                 y_text.Focus();
-                y_mass[y_iterator] = Int32.Parse(y_text.Text);
+                y_mass[y_iterator] = Convert.ToDouble(y_text.Text.Replace('.', ','));
                 y_iterator++;
                 if (y_iterator == y_mass.Length)
                 {

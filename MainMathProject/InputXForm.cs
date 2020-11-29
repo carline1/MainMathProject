@@ -19,7 +19,7 @@ namespace MainMathProject
             error.Hide();
         }
 
-        public int[] x_mass;
+        public double[] x_mass;
         int x_iterator = 0;
 
         private void x_add_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace MainMathProject
             {
                 error.Hide();
                 x_text.Focus();
-                x_mass[x_iterator] = Int32.Parse(x_text.Text);
+                x_mass[x_iterator] = Convert.ToDouble(x_text.Text.Replace('.', ','));
                 x_iterator++;
                 if (x_iterator == x_mass.Length)
                 {

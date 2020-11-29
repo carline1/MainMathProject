@@ -53,6 +53,12 @@
     <Compile Include="CorrelationForm.Designer.cs">
       <DependentUpon>CorrelationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogPolationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogPolationForm.Designer.cs">
+      <DependentUpon>DialogPolationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputNForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     <Compile Include="InputYForm.Designer.cs">
       <DependentUpon>InputYForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PolationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PolationForm.Designer.cs">
+      <DependentUpon>PolationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReliabilityForm.cs">
@@ -79,8 +91,17 @@
     <Compile Include="ReliabilityForm.Designer.cs">
       <DependentUpon>ReliabilityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowRegressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRegressForm.Designer.cs">
+      <DependentUpon>ShowRegressForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CorrelationForm.resx">
       <DependentUpon>CorrelationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogPolationForm.resx">
+      <DependentUpon>DialogPolationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputNForm.resx">
       <DependentUpon>InputNForm.cs</DependentUpon>
@@ -90,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InputYForm.resx">
       <DependentUpon>InputYForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PolationForm.resx">
+      <DependentUpon>PolationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="ReliabilityForm.resx">
       <DependentUpon>ReliabilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRegressForm.resx">
+      <DependentUpon>ShowRegressForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

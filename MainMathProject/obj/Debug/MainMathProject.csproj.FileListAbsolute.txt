@@ -12,3 +12,6 @@ D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.Inpu
 D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.InputXForm.resources
 D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.InputYForm.resources
 D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.ReliabilityForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.ShowRegressForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.DialogPolationForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.PolationForm.resources

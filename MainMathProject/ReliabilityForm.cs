@@ -12,8 +12,8 @@ namespace MainMathProject
 {
     public partial class ReliabilityForm : Form
     {
-        public int[] y_mass;
-        public int[] x_mass;
+        public double[] y_mass;
+        public double[] x_mass;
         public int rel_index;  // идедекс надежности в csv файле с t-критерием 
 
         public ReliabilityForm(InputYForm input_y)
@@ -37,6 +37,10 @@ namespace MainMathProject
             CorrelationForm cor = new CorrelationForm(this);
             cor.Show();
             Hide();
+        }
+        protected void SetForm_Closed(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
