@@ -22,6 +22,7 @@ namespace MainMathProject
         public double a1 = 0;
         int n = 0;
         double[] y_residuals;  // остатки
+        public bool link;
         public ShowRegressForm(CorrelationForm cor)
         {
             InitializeComponent();
@@ -34,6 +35,9 @@ namespace MainMathProject
             y_residuals = new double[n];
             a0 = cor.a0;
             a1 = cor.a1;
+            link = cor.link;
+            if (link == false)
+                next.Hide();
 
             double regression(double x)
             {

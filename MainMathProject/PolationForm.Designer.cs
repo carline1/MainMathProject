@@ -50,11 +50,11 @@
             // 
             this.pol_value.AutoSize = true;
             this.pol_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pol_value.Location = new System.Drawing.Point(60, 108);
+            this.pol_value.Location = new System.Drawing.Point(75, 110);
             this.pol_value.Name = "pol_value";
-            this.pol_value.Size = new System.Drawing.Size(206, 24);
+            this.pol_value.Size = new System.Drawing.Size(220, 24);
             this.pol_value.TabIndex = 1;
-            this.pol_value.Text = "[   ;   ] с надежность ...";
+            this.pol_value.Text = "[   ;   ] с надежностью ...";
             // 
             // label1
             // 

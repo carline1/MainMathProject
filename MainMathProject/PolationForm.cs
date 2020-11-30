@@ -90,11 +90,11 @@ namespace MainMathProject
             }
             else
             {
-                Console.WriteLine(sxy);
+                /*Console.WriteLine(sxy);
                 Console.WriteLine(h0);
                 Console.WriteLine(t_table);
-                Console.WriteLine(delta);
-                if (value > x_mass.Max())
+                Console.WriteLine(delta);*/
+                if (value > x_mass.Max() || value < x_mass.Min())
                     pol_text.Text = $"Экстраполяция";
                 else if (value < x_mass.Max())
                     pol_text.Text = $"Интерполяция";

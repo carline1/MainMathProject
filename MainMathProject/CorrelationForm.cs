@@ -29,7 +29,7 @@ namespace MainMathProject
         int rel_index = 1;  // индекс т-критерия
         public double a0 = 0;  // intercept - в ур-е прямой это b
         public double a1 = 0;  // slope - в ур-е прямой это k
-
+        public bool link = false;  // связь между x и y
         public void bubble(double[] x, double[] y)
         {
             for (int i = 0; i < y.Length - 2; i++)
@@ -116,11 +116,13 @@ namespace MainMathProject
             t_observ = (double)(r * Math.Sqrt(n - 2) / (double)(Math.Sqrt(1 - Math.Pow(r, 2))));
             if (Math.Abs(t_observ) > t_table)
             {
+                link = true;
                 hyp_test.Text = "Между X и Y существует тесная связь";
                 comparison_t.Text = $"|t набл| > t табл \n({Math.Abs(t_observ)} > { t_table})";
             }
             else
             {
+                link = false;
                 hyp_test.Text = "Между X и Y связи нет";
                 comparison_t.Text = $"|t набл| < t табл \n({Math.Abs(t_observ)} < { t_table})";
             }
