@@ -13,12 +13,15 @@ namespace MainMathProject
 {
     public partial class PolationForm : Form
     {
-        double a0;
-        double a1;
-        int rel_index;
-        double[] x_mass;
-        double[] y_mass;
-        double x_average;
+        public double a0;
+        public double a1;
+        public int rel_index;
+        public double[] x_mass;
+        public double[] y_mass;
+        public double x_average;
+        public double y_average;
+        public double y_sigma;
+        public bool link;
         int n;
 
         public PolationForm(DialogPolationForm dialog)
@@ -32,6 +35,10 @@ namespace MainMathProject
             x_mass = dialog.x_mass;
             y_mass = dialog.y_mass;
             x_average = dialog.x_average;
+            y_average = dialog.y_average;
+            y_average = dialog.y_average;
+            y_sigma = dialog.y_sigma;
+            link = dialog.link;
             n = x_mass.Length;
             int df = n - 2;
             double value = double.Parse(dialog.polation_text.Text.Replace('.', ','));
@@ -101,8 +108,15 @@ namespace MainMathProject
                 if (rel_index == 1)
                     pol_value.Text = $"[{left_border:F4};{right_border:F4}] с надежностью 95%";
                 if (rel_index == 2)
-                    pol_value.Text = $"[{left_border};{right_border}] с надежностью 99%";
+                    pol_value.Text = $"[{left_border:F4};{right_border:F4}] с надежностью 99%";
             }
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            ShowRegressForm reg = new ShowRegressForm(this);
+            reg.Show();
+            Hide();
         }
 
         protected void SetForm_Closed(object sender, EventArgs e)

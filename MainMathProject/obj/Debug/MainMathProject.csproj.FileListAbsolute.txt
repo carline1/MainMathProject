@@ -15,3 +15,5 @@ D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.Reli
 D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.ShowRegressForm.resources
 D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.DialogPolationForm.resources
 D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.PolationForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.DataInputSelectionForm.resources
+D:\Desktop\GitHub\MainMathProject\MainMathProject\obj\Debug\MainMathProject.FileHelperForm.resources

@@ -23,6 +23,13 @@ namespace MainMathProject
             y_mass = input_y.y_mass;
         }
 
+        public ReliabilityForm(FileHelperForm helper)
+        {
+            InitializeComponent();
+            x_mass = helper.x_mass;
+            y_mass = helper.y_mass;
+        }
+
         private void rel95_Click(object sender, EventArgs e)
         {
             rel_index = 1;

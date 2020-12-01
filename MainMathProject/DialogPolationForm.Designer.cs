@@ -112,7 +112,7 @@
             this.Controls.Add(this.polation_button);
             this.Name = "DialogPolationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DialogPolation";
+            this.Text = "Ввод данных для прогнозирования";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);
             this.ResumeLayout(false);
             this.PerformLayout();

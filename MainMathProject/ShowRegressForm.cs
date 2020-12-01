@@ -15,14 +15,50 @@ namespace MainMathProject
     {
         public double[] x_mass;
         public double[] y_mass;
-        double y_average;
+        public double y_average;
         public double x_average;
-        double y_sigma;
+        public double y_sigma;
         public double a0 = 0;
         public double a1 = 0;
         int n = 0;
         double[] y_residuals;  // остатки
         public bool link;
+        public int rel_index;
+
+        public void bubble(double[] x, double[] y)
+        {
+            for (int i = 0; i < y.Length - 2; i++)
+                for (int j = 0; j < y.Length - i - 1; j++)
+                    if (y[j] > y[j + 1])
+                    {
+                        double k = y[j];
+                        y[j] = y[j + 1];
+                        y[j + 1] = k;
+                        k = x[j];
+                        x[j] = x[j + 1];
+                        x[j + 1] = k;
+                    }
+        }
+
+        public ShowRegressForm(PolationForm pol)
+        {
+            InitializeComponent();
+            x_mass = pol.x_mass;
+            y_mass = pol.y_mass;
+            n = x_mass.Length;
+            y_average = pol.y_average;
+            x_average = pol.x_average;
+            y_sigma = pol.y_sigma;
+            y_residuals = new double[n];
+            a0 = pol.a0;
+            a1 = pol.a1;
+            link = pol.link;
+            rel_index = pol.rel_index;
+            if (link == false)
+                next.Hide();
+            body();
+        }
+
         public ShowRegressForm(CorrelationForm cor)
         {
             InitializeComponent();
@@ -36,9 +72,14 @@ namespace MainMathProject
             a0 = cor.a0;
             a1 = cor.a1;
             link = cor.link;
+            rel_index = cor.rel_index;
             if (link == false)
                 next.Hide();
+            body();
+        }
 
+        void body()
+        {
             double regression(double x)
             {
                 return a0 + a1 * x;
@@ -58,13 +99,14 @@ namespace MainMathProject
             // дальше комментариев нет, там вообще ничего не понятно :(
             // (лучше не смотрите код далее, есть вероятность потерять зрение)
 
-            double[] x_mass_copy = x_mass;
-            double[] y_mass_copy = y_mass;
-            cor.bubble(x_mass_copy, y_mass_copy);
+            double[] x_mass_copy = new double[n];
+            Array.Copy(x_mass, x_mass_copy, n);
+            //double[] y_mass_copy = y_mass;
+            bubble(x_mass_copy, y_residuals);
             // значения кумулятивного распределения
-            decimal[] i_cumul = new decimal[n];  
+            decimal[] i_cumul = new decimal[n];
             for (int i = 0; i < n; i++)
-                i_cumul[i] = ((decimal)i+1 - (decimal)0.5) / (decimal)n;
+                i_cumul[i] = ((decimal)i + 1 - (decimal)0.5) / (decimal)n;
             // рассчитаем по функции стандартного распределения от значения кумулятивного распределения значения
             // (на входе - вероятность, на выходе - значение)
             /*double[] zt = new double[n];
@@ -118,9 +160,30 @@ namespace MainMathProject
             }
 
             // считаем za
+            double y_res_average = 0;
+            double y_res_disp = 0;
+            double y_res_sigma = 0;
+            for (int i = 0; i < n; i++)
+            {
+                y_res_average += y_residuals[i];
+            }
+            y_res_average = y_res_average / (double)n;
+            for (int i = 0; i < n; i++)
+            {
+                y_res_disp += Math.Pow((y_residuals[i] - y_res_average), 2);
+            }
+            y_res_disp = y_res_disp / (double)n;
+            if (n > 30)
+            {
+                y_res_sigma = Math.Sqrt(y_res_disp);
+            }
+            else
+            {
+                y_res_sigma = Math.Sqrt(y_res_disp * (double)n / (double)(n - 1));
+            }
             double[] za = new double[n];
             for (int i = 0; i < n; i++)
-                za[i] = (y_mass_copy[i] - y_average) / y_sigma;
+                za[i] = (y_residuals[i] - y_res_average) / y_res_sigma;
 
             // вывод qq plot
             for (int i = 0; i < n; i++)
@@ -181,11 +244,77 @@ namespace MainMathProject
             }
             qq_plot.Series["reg"].Points.AddXY(zt.Min(), qq_regression(Decimal.ToDouble(zt.Min())));
             qq_plot.Series["reg"].Points.AddXY(zt.Max(), qq_regression(Decimal.ToDouble(zt.Max())));
+
+            // Гистограмма остатков
+            /*int left_border = Convert.ToInt32(Math.Floor(y_residuals.Min()));
+            int right_border = Convert.ToInt32(Math.Ceiling(y_residuals.Max()));
+            int range = right_border - left_border;  // длина гистограммы от левой границы до правой
+            double section = (double)range / (double)8;  // ширина столбца
+            int[] hit = new int[8];
+            double cur_section = left_border;*/
+            // https://intellect.icu/poligon-i-gistogramma-primery-postroeniya-4542
+            int m = (int)Math.Round(1 + 3.322 * Math.Log10(n), MidpointRounding.AwayFromZero);  // кол-во столбцов
+            double section = (y_residuals.Max() - y_residuals.Min()) / (double)m;  // ширина столбца
+            double left_border = y_residuals.Min() - section / 2;
+            m += 1;  // это зачем-то нужно
+            //double right_border = y_residuals.Max();
+            int[] hit = new int[m];  // кол-во попаданий в интервал = ширине столбца
+            double cur_section = left_border;
+            /*for (int i = 0; i < n; i++)
+                Console.Write($"{y_residuals[i]}");
+            Console.Write($"left {left_border} right {right_border}");*/
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    //Console.Write($"{y_residuals[j]} >= {cur_section} && {y_residuals[j]} < {cur_section + section}  ");
+                    if (y_residuals[j] >= cur_section && y_residuals[j] < cur_section + section)
+                        hit[i]++;
+                    //Console.WriteLine($"hit[{i}] = {hit[i]}");
+                }
+                cur_section += section;
+            }
+            cur_section = left_border;
+            double test = 0;
+            for (int i = 0; i < m; i++)
+            {
+                //Console.Write(hit[i]);
+                gist_residuals.Series["col"].Points.AddXY(cur_section + (section / (double)2), (double)hit[i] / (double)n / section);
+                //Console.WriteLine($" cur = {cur_section}");
+                cur_section += section;
+                test += (double)hit[i] / (double)n;
+            }
+            //Console.WriteLine($"section = {section}");
+            //Console.WriteLine($"test = {test}");
+            double norm_rasp_res(double x)
+            {
+                return (1 / (y_res_sigma * Math.Sqrt(2 * Math.PI)) * Math.Exp(-(Math.Pow(x - y_res_average, 2) / (2 * Math.Pow(y_res_sigma, 2)))));
+            }
+            cur_section = left_border;
+            /*for (int i = 0; i < m; i++)
+            {
+                gist_residuals.Series["normal"].Points.AddXY(cur_section + (section / (double)2), norm_rasp_res(cur_section + (section / (double)2)));
+                cur_section += section;
+            } */
+
+            for (int i = 0; i < m * 2 + 1; i++)
+            {
+                gist_residuals.Series["normal"].Points.AddXY(cur_section, norm_rasp_res(cur_section));
+                cur_section += (section / (double)2);
+            }
         }
+
         private void next_Click(object sender, EventArgs e)
         {
             DialogPolationForm dialog = new DialogPolationForm(this);
             dialog.Show();
+            Hide();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            CorrelationForm cor = new CorrelationForm(this);
+            cor.Show();
             Hide();
         }
 

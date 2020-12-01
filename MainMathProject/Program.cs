@@ -16,7 +16,7 @@ namespace MainMathProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InputNForm());
+            Application.Run(new DataInputSelectionForm());
         }
     }
 }

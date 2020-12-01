@@ -53,11 +53,23 @@
     <Compile Include="CorrelationForm.Designer.cs">
       <DependentUpon>CorrelationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataInputSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataInputSelectionForm.Designer.cs">
+      <DependentUpon>DataInputSelectionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogPolationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DialogPolationForm.Designer.cs">
       <DependentUpon>DialogPolationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileHelperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileHelperForm.Designer.cs">
+      <DependentUpon>FileHelperForm.cs</DependentUpon>
     </Compile>
     <Compile Include="InputNForm.cs">
       <SubType>Form</SubType>
@@ -100,8 +112,14 @@
     <EmbeddedResource Include="CorrelationForm.resx">
       <DependentUpon>CorrelationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataInputSelectionForm.resx">
+      <DependentUpon>DataInputSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DialogPolationForm.resx">
       <DependentUpon>DialogPolationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileHelperForm.resx">
+      <DependentUpon>FileHelperForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputNForm.resx">
       <DependentUpon>InputNForm.cs</DependentUpon>

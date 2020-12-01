@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exist_val_text = new System.Windows.Forms.Label();
             this.exist_val = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pol_text
@@ -70,7 +71,7 @@
             // 
             this.exist_val_text.AutoSize = true;
             this.exist_val_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exist_val_text.Location = new System.Drawing.Point(12, 5);
+            this.exist_val_text.Location = new System.Drawing.Point(97, 5);
             this.exist_val_text.Name = "exist_val_text";
             this.exist_val_text.Size = new System.Drawing.Size(366, 24);
             this.exist_val_text.TabIndex = 2;
@@ -80,17 +81,29 @@
             // 
             this.exist_val.AutoSize = true;
             this.exist_val.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exist_val.Location = new System.Drawing.Point(12, 29);
+            this.exist_val.Location = new System.Drawing.Point(97, 29);
             this.exist_val.Name = "exist_val";
             this.exist_val.Size = new System.Drawing.Size(60, 24);
             this.exist_val.TabIndex = 2;
             this.exist_val.Text = "y[x] = ";
+            // 
+            // back
+            // 
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(5, 5);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(86, 31);
+            this.back.TabIndex = 4;
+            this.back.Text = "Назад";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // PolationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 162);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.exist_val);
             this.Controls.Add(this.exist_val_text);
             this.Controls.Add(this.label1);
@@ -98,7 +111,7 @@
             this.Controls.Add(this.pol_text);
             this.Name = "PolationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PolationForm";
+            this.Text = "Прогноз";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,5 +125,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label exist_val_text;
         private System.Windows.Forms.Label exist_val;
+        private System.Windows.Forms.Button back;
     }
 }

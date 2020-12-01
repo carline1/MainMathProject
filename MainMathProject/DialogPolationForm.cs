@@ -17,6 +17,9 @@ namespace MainMathProject
         public double[] x_mass;
         public double[] y_mass;
         public double x_average;
+        public double y_average;
+        public double y_sigma;
+        public bool link;
         public int rel_index = 1; // надежность
 
         public DialogPolationForm(ShowRegressForm reg)
@@ -27,6 +30,9 @@ namespace MainMathProject
             x_mass = reg.x_mass;
             y_mass = reg.y_mass;
             x_average = reg.x_average;
+            y_average = reg.y_average;
+            y_sigma = reg.y_sigma;
+            link = reg.link;
         }
 
         private void interpolation_Click(object sender, EventArgs e)

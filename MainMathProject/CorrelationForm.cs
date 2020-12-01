@@ -26,7 +26,7 @@ namespace MainMathProject
         int df = 0;  // степени свободы
         double t_observ = 0;  // т-критерий наблюдаемый
         double t_table = 0;  // т-критерий табличный
-        int rel_index = 1;  // индекс т-критерия
+        public int rel_index = 1;  // индекс т-критерия
         public double a0 = 0;  // intercept - в ур-е прямой это b
         public double a1 = 0;  // slope - в ур-е прямой это k
         public bool link = false;  // связь между x и y
@@ -44,6 +44,21 @@ namespace MainMathProject
                         x[j + 1] = k;
                     }
         }
+        /*void smass(double[] mass)
+        {
+            for (int i = 0; i < mass.Length; i++)
+                Console.Write($"{mass[i]} ");
+            Console.WriteLine();
+        }*/
+        public CorrelationForm(ShowRegressForm reg)
+        {
+            InitializeComponent();
+            x_mass = reg.x_mass;
+            y_mass = reg.y_mass;
+            n = x_mass.Length;
+            rel_index = reg.rel_index;  // индекс в таблице критерия т стьюдента
+            body();
+        }
 
         public CorrelationForm(ReliabilityForm rel)
         {
@@ -52,8 +67,17 @@ namespace MainMathProject
             y_mass = rel.y_mass;
             n = x_mass.Length;
             rel_index = rel.rel_index;  // индекс в таблице критерия т стьюдента
-            bubble(y_mass, x_mass);
+            body();
+        }
 
+        // тело формы
+        void body()
+        {
+            bubble(y_mass, x_mass);
+            /*Console.Write("Массив x: ");
+            smass(x_mass);
+            Console.Write("Массив y: ");
+            smass(y_mass);*/
             // рассчитываем средние значения
             for (int i = 0; i < n; i++)
             {
@@ -85,7 +109,7 @@ namespace MainMathProject
                 x_sigma = Math.Sqrt(x_disp * (double)n / (double)(n - 1));
                 y_sigma = Math.Sqrt(y_disp * (double)n / (double)(n - 1));
             }
-            
+
             // рассчитываем корреляцию
             for (int i = 0; i < n; i++)
             {
@@ -130,8 +154,10 @@ namespace MainMathProject
             // уравнение регрессии
             a1 = r * y_sigma / x_sigma;
             a0 = y_average - x_average * a1;
-            regress_func.Text = $"y = {a0:F6} + {a1:F6}x";
-            
+            if (a1 >= 0)
+                regress_func.Text = $"y = {a0:F6} + {a1:F6}x";
+            else
+                regress_func.Text = $"y = {a0:F6} - {Math.Abs(a1):F6}x";
         }
 
         private void show_regress_Click(object sender, EventArgs e)
