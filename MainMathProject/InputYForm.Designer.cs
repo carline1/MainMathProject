@@ -55,6 +55,7 @@
             // 
             // y_add
             // 
+            this.y_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.y_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.y_add.Location = new System.Drawing.Point(175, 82);
             this.y_add.Name = "y_add";
@@ -66,6 +67,7 @@
             // 
             // back
             // 
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.back.Location = new System.Drawing.Point(107, 83);
             this.back.Name = "back";
@@ -77,6 +79,7 @@
             // 
             // success
             // 
+            this.success.Cursor = System.Windows.Forms.Cursors.Hand;
             this.success.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.success.Location = new System.Drawing.Point(281, 83);
             this.success.Name = "success";
@@ -97,7 +100,7 @@
             this.error.TabIndex = 9;
             this.error.Text = "Ошибка!";
             // 
-            // InputY
+            // InputYForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +111,7 @@
             this.Controls.Add(this.y_add);
             this.Controls.Add(this.y_text);
             this.Controls.Add(this.y_lable);
-            this.Name = "InputY";
+            this.Name = "InputYForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод Y";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);

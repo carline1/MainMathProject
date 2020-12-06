@@ -24,26 +24,37 @@ namespace MainMathProject
 
         private void x_add_Click(object sender, EventArgs e)
         {
-            if (x_text.Text == "")
-                error.Show();
-            else
+            try
             {
-                error.Hide();
-                x_text.Focus();
-                x_mass[x_iterator] = Convert.ToDouble(x_text.Text.Replace('.', ','));
-                x_iterator++;
-                if (x_iterator == x_mass.Length)
-                {
-                    x_add.Hide();
-                    success.Location = new Point(175, 82);
-                    success.Show();
-                    return;
-                }
-                x_lable.Text = $"Введите x[{x_iterator + 1}]";
-                if (x_mass[x_iterator] != 0)
-                    x_text.Text = $"{x_mass[x_iterator]}";
+                if (x_text.Text == "")
+                    error.Show();
                 else
-                    x_text.Text = "";
+                {
+                    error.Hide();
+                    x_text.Focus();
+                    x_mass[x_iterator] = Convert.ToDouble(x_text.Text.Replace('.', ','));
+                    x_iterator++;
+                    if (x_iterator == x_mass.Length)
+                    {
+                        x_add.Hide();
+                        success.Location = new Point(175, 82);
+                        success.Show();
+                        return;
+                    }
+                    x_lable.Text = $"Введите x[{x_iterator + 1}]";
+                    if (x_mass[x_iterator] != 0)
+                        x_text.Text = $"{x_mass[x_iterator]}";
+                    else
+                        x_text.Text = "";
+                }
+            }
+            catch (Exception exp)
+            {
+                DialogResult result = MessageBox.Show($"Ошибка ввода данных\n{exp.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (result == DialogResult.OK)
+                {
+                    SetForm_Closed(sender, e);
+                }
             }
         }
 

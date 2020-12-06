@@ -55,6 +55,7 @@
             // 
             // x_add
             // 
+            this.x_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.x_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.x_add.Location = new System.Drawing.Point(175, 82);
             this.x_add.Name = "x_add";
@@ -66,22 +67,24 @@
             // 
             // back
             // 
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.back.Location = new System.Drawing.Point(107, 83);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(62, 28);
-            this.back.TabIndex = 3;
+            this.back.TabIndex = 4;
             this.back.Text = "Назад";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // success
             // 
+            this.success.Cursor = System.Windows.Forms.Cursors.Hand;
             this.success.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.success.Location = new System.Drawing.Point(281, 83);
             this.success.Name = "success";
             this.success.Size = new System.Drawing.Size(100, 29);
-            this.success.TabIndex = 4;
+            this.success.TabIndex = 5;
             this.success.Text = "Готово";
             this.success.UseVisualStyleBackColor = true;
             this.success.Click += new System.EventHandler(this.success_Click);
@@ -97,7 +100,7 @@
             this.error.TabIndex = 8;
             this.error.Text = "Ошибка!";
             // 
-            // InputX
+            // InputXForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +111,7 @@
             this.Controls.Add(this.x_add);
             this.Controls.Add(this.x_text);
             this.Controls.Add(this.x_lable);
-            this.Name = "InputX";
+            this.Name = "InputXForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод X";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);

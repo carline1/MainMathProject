@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(165, 20);
+            this.label1.Location = new System.Drawing.Point(200, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 20);
             this.label1.TabIndex = 0;
@@ -54,9 +54,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(44, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(299, 20);
+            this.label2.Size = new System.Drawing.Size(454, 20);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Файл должен состоять из двух строк:";
+            this.label2.Text = "Файл с расширением .csv  должен состоять из двух строк:";
             // 
             // label3
             // 
@@ -93,8 +93,9 @@
             // 
             // open_file
             // 
+            this.open_file.Cursor = System.Windows.Forms.Cursors.Hand;
             this.open_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.open_file.Location = new System.Drawing.Point(150, 150);
+            this.open_file.Location = new System.Drawing.Point(185, 152);
             this.open_file.Name = "open_file";
             this.open_file.Size = new System.Drawing.Size(170, 35);
             this.open_file.TabIndex = 3;
@@ -106,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 211);
+            this.ClientSize = new System.Drawing.Size(542, 211);
             this.Controls.Add(this.open_file);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -115,8 +116,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FileHelperForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);
             this.Text = "Формат файла";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SetForm_Closed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

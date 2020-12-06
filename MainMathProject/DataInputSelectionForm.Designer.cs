@@ -40,27 +40,29 @@
             this.x_lable.Location = new System.Drawing.Point(40, 10);
             this.x_lable.Name = "x_lable";
             this.x_lable.Size = new System.Drawing.Size(301, 24);
-            this.x_lable.TabIndex = 1;
+            this.x_lable.TabIndex = 2;
             this.x_lable.Text = "Выберите способ ввода данных";
             // 
             // hand_input
             // 
+            this.hand_input.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hand_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.hand_input.Location = new System.Drawing.Point(100, 45);
             this.hand_input.Name = "hand_input";
             this.hand_input.Size = new System.Drawing.Size(170, 35);
-            this.hand_input.TabIndex = 2;
+            this.hand_input.TabIndex = 1;
             this.hand_input.Text = "Ввести вручную";
             this.hand_input.UseVisualStyleBackColor = true;
             this.hand_input.Click += new System.EventHandler(this.hand_input_Click);
             // 
             // open_file
             // 
+            this.open_file.Cursor = System.Windows.Forms.Cursors.Hand;
             this.open_file.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.open_file.Location = new System.Drawing.Point(100, 90);
             this.open_file.Name = "open_file";
             this.open_file.Size = new System.Drawing.Size(170, 35);
-            this.open_file.TabIndex = 2;
+            this.open_file.TabIndex = 0;
             this.open_file.Text = "Загрузить из файла";
             this.open_file.UseVisualStyleBackColor = true;
             this.open_file.Click += new System.EventHandler(this.open_file_Click);

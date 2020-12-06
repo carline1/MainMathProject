@@ -21,29 +21,40 @@ namespace MainMathProject
 
         private void n_quant_Click(object sender, EventArgs e)
         {
-            if (n_text.Text == "")
+            try
             {
-                error_outside.Hide();
-                error.Show();
-            }  
-            else if (Int32.Parse(n_text.Text) < 1)
-            {
-                error_outside.Hide();
-                error.Show();
-            }  
-            else if (Int32.Parse(n_text.Text) > 374)
-            {
-                error.Hide();
-                error_outside.Location = new Point(100, 117);
-                error_outside.Show();
+                if (n_text.Text == "")
+                {
+                    error_outside.Hide();
+                    error.Show();
+                }
+                else if (Int32.Parse(n_text.Text) < 2)
+                {
+                    error_outside.Hide();
+                    error.Show();
+                }
+                else if (Int32.Parse(n_text.Text) > 374)
+                {
+                    error.Hide();
+                    error_outside.Location = new Point(100, 117);
+                    error_outside.Show();
+                }
+                else
+                {
+                    error.Hide();
+                    InputXForm input_x = new InputXForm();
+                    input_x.x_mass = new double[Int32.Parse(n_text.Text)];
+                    input_x.Show();
+                    Hide();
+                }
             }
-            else
+            catch (Exception exp)
             {
-                error.Hide(); 
-                InputXForm input_x = new InputXForm();
-                input_x.x_mass = new double[Int32.Parse(n_text.Text)];
-                input_x.Show();
-                Hide();
+                DialogResult result = MessageBox.Show($"Ошибка ввода данных\n{exp.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (result == DialogResult.OK)
+                {
+                    SetForm_Closed(sender, e);
+                }    
             }
         }
 

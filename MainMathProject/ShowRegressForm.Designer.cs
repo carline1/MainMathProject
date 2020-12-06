@@ -94,6 +94,7 @@
             this.regress.Series.Add(series2);
             this.regress.Size = new System.Drawing.Size(1060, 400);
             this.regress.TabIndex = 1;
+            this.regress.TabStop = false;
             this.regress.Text = "char1";
             // 
             // residuals
@@ -121,6 +122,7 @@
             this.residuals.Series.Add(series3);
             this.residuals.Size = new System.Drawing.Size(350, 223);
             this.residuals.TabIndex = 1;
+            this.residuals.TabStop = false;
             this.residuals.Text = "char1";
             // 
             // gist_residuals
@@ -153,6 +155,7 @@
             this.gist_residuals.Series.Add(series5);
             this.gist_residuals.Size = new System.Drawing.Size(350, 223);
             this.gist_residuals.TabIndex = 1;
+            this.gist_residuals.TabStop = false;
             this.gist_residuals.Text = "char1";
             // 
             // qq_plot
@@ -183,6 +186,7 @@
             this.qq_plot.Series.Add(series7);
             this.qq_plot.Size = new System.Drawing.Size(350, 223);
             this.qq_plot.TabIndex = 1;
+            this.qq_plot.TabStop = false;
             this.qq_plot.Text = "char1";
             // 
             // label2
@@ -220,22 +224,24 @@
             // 
             // next
             // 
+            this.next.Cursor = System.Windows.Forms.Cursors.Hand;
             this.next.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.next.Location = new System.Drawing.Point(771, 12);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(255, 43);
-            this.next.TabIndex = 2;
+            this.next.TabIndex = 0;
             this.next.Text = "Перейти к интерполированию/ экстраполированию";
             this.next.UseVisualStyleBackColor = true;
             this.next.Click += new System.EventHandler(this.next_Click);
             // 
             // back
             // 
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.back.Location = new System.Drawing.Point(12, 12);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(86, 31);
-            this.back.TabIndex = 3;
+            this.back.TabIndex = 1;
             this.back.Text = "Назад";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);

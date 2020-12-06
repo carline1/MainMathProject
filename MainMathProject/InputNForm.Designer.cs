@@ -37,6 +37,7 @@
             // 
             // n_quant
             // 
+            this.n_quant.Cursor = System.Windows.Forms.Cursors.Hand;
             this.n_quant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.n_quant.Location = new System.Drawing.Point(147, 83);
             this.n_quant.Name = "n_quant";

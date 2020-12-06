@@ -25,6 +25,7 @@ namespace MainMathProject
         public DialogPolationForm(ShowRegressForm reg)
         {
             InitializeComponent();
+            error.Hide();
             a0 = reg.a0;
             a1 = reg.a1;
             x_mass = reg.x_mass;
@@ -37,13 +38,31 @@ namespace MainMathProject
 
         private void interpolation_Click(object sender, EventArgs e)
         {
-            if (rel95.Checked)
-                rel_index = 1;
-            else if (rel99.Checked)
-                rel_index = 2;
-            PolationForm pol = new PolationForm(this);
-            pol.Show();
-            Hide();
+            try
+            {
+                if (polation_text.Text == "")
+                    error.Show();
+                else
+                {
+                    error.Hide();
+                    polation_text.Focus();
+                    if (rel95.Checked)
+                        rel_index = 1;
+                    else if (rel99.Checked)
+                        rel_index = 2;
+                    PolationForm pol = new PolationForm(this);
+                    pol.Show();
+                    Hide();
+                }
+            }
+            catch (Exception exp)
+            {
+                DialogResult result = MessageBox.Show($"Ошибка ввода данных\n{exp.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (result == DialogResult.OK)
+                {
+                    SetForm_Closed(sender, e);
+                }
+            }
         }
 
         protected void SetForm_Closed(object sender, EventArgs e)

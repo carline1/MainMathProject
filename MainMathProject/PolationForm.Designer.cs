@@ -89,6 +89,7 @@
             // 
             // back
             // 
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.back.Location = new System.Drawing.Point(5, 5);
             this.back.Name = "back";

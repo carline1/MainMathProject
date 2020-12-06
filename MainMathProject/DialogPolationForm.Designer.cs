@@ -34,15 +34,17 @@
             this.rel95 = new System.Windows.Forms.RadioButton();
             this.rel99 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // polation_button
             // 
+            this.polation_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.polation_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.polation_button.Location = new System.Drawing.Point(115, 185);
             this.polation_button.Name = "polation_button";
             this.polation_button.Size = new System.Drawing.Size(178, 48);
-            this.polation_button.TabIndex = 0;
+            this.polation_button.TabIndex = 1;
             this.polation_button.Text = "Рассчитать";
             this.polation_button.UseVisualStyleBackColor = true;
             this.polation_button.Click += new System.EventHandler(this.interpolation_Click);
@@ -63,17 +65,18 @@
             this.polation_text.Location = new System.Drawing.Point(141, 57);
             this.polation_text.Name = "polation_text";
             this.polation_text.Size = new System.Drawing.Size(127, 22);
-            this.polation_text.TabIndex = 2;
+            this.polation_text.TabIndex = 0;
             // 
             // rel95
             // 
             this.rel95.AutoSize = true;
             this.rel95.Checked = true;
+            this.rel95.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rel95.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rel95.Location = new System.Drawing.Point(141, 136);
             this.rel95.Name = "rel95";
             this.rel95.Size = new System.Drawing.Size(50, 20);
-            this.rel95.TabIndex = 3;
+            this.rel95.TabIndex = 2;
             this.rel95.TabStop = true;
             this.rel95.Text = "0.05";
             this.rel95.UseVisualStyleBackColor = true;
@@ -81,11 +84,13 @@
             // rel99
             // 
             this.rel99.AutoSize = true;
+            this.rel99.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rel99.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rel99.Location = new System.Drawing.Point(218, 136);
             this.rel99.Name = "rel99";
             this.rel99.Size = new System.Drawing.Size(50, 20);
             this.rel99.TabIndex = 3;
+            this.rel99.TabStop = true;
             this.rel99.Text = "0.01";
             this.rel99.UseVisualStyleBackColor = true;
             // 
@@ -93,17 +98,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(95, 104);
+            this.label2.Location = new System.Drawing.Point(60, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(216, 24);
+            this.label2.Size = new System.Drawing.Size(292, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Выберите надежность";
+            this.label2.Text = "Выберите уровень значимости";
+            // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.error.ForeColor = System.Drawing.Color.Red;
+            this.error.Location = new System.Drawing.Point(170, 82);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(62, 15);
+            this.error.TabIndex = 8;
+            this.error.Text = "Ошибка!";
             // 
             // DialogPolationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 259);
+            this.Controls.Add(this.error);
             this.Controls.Add(this.rel99);
             this.Controls.Add(this.rel95);
             this.Controls.Add(this.polation_text);
@@ -127,5 +144,6 @@
         private System.Windows.Forms.RadioButton rel99;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox polation_text;
+        private System.Windows.Forms.Label error;
     }
 }
