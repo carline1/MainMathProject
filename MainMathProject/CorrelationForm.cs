@@ -108,7 +108,6 @@ namespace MainMathProject
                                         {300,1.968, 2.592, 3.323},
                                         {350,1.967, 2.590, 3.319}};
 
-
         public double[] x_mass;
         public double[] y_mass;
         int n = 0;  // кол-во комбинаций x y
