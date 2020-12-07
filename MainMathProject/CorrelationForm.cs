@@ -117,7 +117,7 @@ namespace MainMathProject
         double y_disp = 0;  // дисперсия y
         public double x_sigma = 0;  // ср квадратич x
         public double y_sigma = 0;  // ср квадратич y
-        double r = 0;  // коэфф корреляции
+        public double r = 0;  // коэфф корреляции
         int df = 0;  // степени свободы
         double t_observ = 0;  // т-критерий наблюдаемый
         double t_table = 0;  // т-критерий табличный

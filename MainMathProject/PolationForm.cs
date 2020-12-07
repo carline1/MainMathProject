@@ -22,6 +22,7 @@ namespace MainMathProject
         public double y_average;
         public double y_sigma;
         public bool link;
+        public double r;
         int n;
         double[,] t_mass = new double[,] {{1,12.7, 63.65, 636.61},
                                         {2,4.303, 9.925, 31.602},
@@ -130,6 +131,7 @@ namespace MainMathProject
             y_average = dialog.y_average;
             y_sigma = dialog.y_sigma;
             link = dialog.link;
+            r = dialog.r;
             n = x_mass.Length;
             int df = n - 2;
             double value = double.Parse(dialog.polation_text.Text.Replace('.', ','));

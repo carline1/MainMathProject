@@ -100,9 +100,10 @@
             // residuals
             // 
             this.residuals.BackColor = System.Drawing.SystemColors.Control;
+            chartArea2.AxisX.LabelStyle.Format = "{0:F3}";
             chartArea2.AxisX.MajorGrid.Enabled = false;
             chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.DarkGray;
-            chartArea2.AxisX.Title = "Значения x";
+            chartArea2.AxisX.Title = "Значение регрессионной прямой";
             chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
             chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
@@ -138,7 +139,7 @@
             chartArea3.BackColor = System.Drawing.SystemColors.Control;
             chartArea3.Name = "ChartArea1";
             this.gist_residuals.ChartAreas.Add(chartArea3);
-            this.gist_residuals.Location = new System.Drawing.Point(348, 430);
+            this.gist_residuals.Location = new System.Drawing.Point(340, 430);
             this.gist_residuals.Name = "gist_residuals";
             series4.BorderColor = System.Drawing.Color.Black;
             series4.ChartArea = "ChartArea1";
@@ -205,7 +206,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(429, 415);
+            this.label3.Location = new System.Drawing.Point(422, 415);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(232, 25);
             this.label3.TabIndex = 0;

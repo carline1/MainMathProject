@@ -24,6 +24,7 @@ namespace MainMathProject
         double[] y_residuals;  // остатки
         public bool link;
         public int rel_index;
+        public double r;  
         decimal[,] snd_mass = new decimal[,] {{0.00005m,0.00005m,0.00004m,0.00004m,0.00004m,0.00004m,0.00004m,0.00004m,0.00003m,0.00003m},
                                             {0.00007m,0.00007m,0.00007m,0.00006m,0.00006m,0.00006m,0.00006m,0.00005m,0.00005m,0.00005m},
                                             {0.00011m,0.00010m,0.00010m,0.00010m,0.00009m,0.00009m,0.00008m,0.00008m,0.00008m,0.00008m},
@@ -134,6 +135,7 @@ namespace MainMathProject
             a1 = pol.a1;
             link = pol.link;
             rel_index = pol.rel_index;
+            r = pol.r;
             if (link == false)
                 next.Hide();
             body();
@@ -153,6 +155,7 @@ namespace MainMathProject
             a1 = cor.a1;
             link = cor.link;
             rel_index = cor.rel_index;
+            r = cor.r;
             if (link == false)
                 next.Hide();
             body();
@@ -169,7 +172,7 @@ namespace MainMathProject
             {
                 y_residuals[i] = y_mass[i] - regression(x_mass[i]);
                 regress.Series["cor"].Points.AddXY(x_mass[i], y_mass[i]);  // поле корреляции
-                residuals.Series["res"].Points.AddXY(x_mass[i], y_residuals[i]); // график остатков 
+                residuals.Series["res"].Points.AddXY(regression(x_mass[i]), y_residuals[i]); // график остатков 
             }
 
             // регрессия на поле корреляции
