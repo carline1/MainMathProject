@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cor_field = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.r_label = new System.Windows.Forms.Label();
             this.hyp_test = new System.Windows.Forms.Label();
@@ -43,22 +43,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.r2_label = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cor_field)).BeginInit();
             this.SuspendLayout();
             // 
             // cor_field
             // 
             this.cor_field.BackColor = System.Drawing.SystemColors.Control;
-            chartArea1.BackColor = System.Drawing.SystemColors.Control;
-            chartArea1.Name = "ChartArea1";
-            this.cor_field.ChartAreas.Add(chartArea1);
+            chartArea3.BackColor = System.Drawing.SystemColors.Control;
+            chartArea3.Name = "ChartArea1";
+            this.cor_field.ChartAreas.Add(chartArea3);
             this.cor_field.Location = new System.Drawing.Point(369, 64);
             this.cor_field.Name = "cor_field";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Name = "point";
-            this.cor_field.Series.Add(series1);
-            this.cor_field.Size = new System.Drawing.Size(707, 428);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Name = "point";
+            this.cor_field.Series.Add(series3);
+            this.cor_field.Size = new System.Drawing.Size(707, 466);
             this.cor_field.TabIndex = 0;
             this.cor_field.TabStop = false;
             this.cor_field.Text = "chart1";
@@ -77,7 +78,7 @@
             // 
             this.hyp_test.AutoSize = true;
             this.hyp_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hyp_test.Location = new System.Drawing.Point(32, 190);
+            this.hyp_test.Location = new System.Drawing.Point(32, 234);
             this.hyp_test.Name = "hyp_test";
             this.hyp_test.Size = new System.Drawing.Size(165, 24);
             this.hyp_test.TabIndex = 2;
@@ -110,7 +111,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(31, 158);
+            this.label3.Location = new System.Drawing.Point(31, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(298, 25);
             this.label3.TabIndex = 4;
@@ -120,7 +121,7 @@
             // 
             this.comparison_t.AutoSize = true;
             this.comparison_t.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comparison_t.Location = new System.Drawing.Point(32, 252);
+            this.comparison_t.Location = new System.Drawing.Point(32, 296);
             this.comparison_t.Name = "comparison_t";
             this.comparison_t.Size = new System.Drawing.Size(154, 24);
             this.comparison_t.TabIndex = 5;
@@ -131,7 +132,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(31, 324);
+            this.label4.Location = new System.Drawing.Point(31, 368);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(228, 25);
             this.label4.TabIndex = 4;
@@ -141,7 +142,7 @@
             // 
             this.regress_func.AutoSize = true;
             this.regress_func.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.regress_func.Location = new System.Drawing.Point(32, 356);
+            this.regress_func.Location = new System.Drawing.Point(32, 400);
             this.regress_func.Name = "regress_func";
             this.regress_func.Size = new System.Drawing.Size(172, 24);
             this.regress_func.TabIndex = 6;
@@ -151,7 +152,7 @@
             // 
             this.show_regress.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show_regress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.show_regress.Location = new System.Drawing.Point(36, 418);
+            this.show_regress.Location = new System.Drawing.Point(36, 462);
             this.show_regress.Name = "show_regress";
             this.show_regress.Size = new System.Drawing.Size(241, 47);
             this.show_regress.TabIndex = 7;
@@ -163,7 +164,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(379, 260);
+            this.label5.Location = new System.Drawing.Point(385, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 16);
             this.label5.TabIndex = 8;
@@ -173,7 +174,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(736, 476);
+            this.label6.Location = new System.Drawing.Point(735, 505);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 16);
             this.label6.TabIndex = 9;
@@ -183,17 +184,28 @@
             // 
             this.r2_label.AutoSize = true;
             this.r2_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.r2_label.Location = new System.Drawing.Point(32, 108);
+            this.r2_label.Location = new System.Drawing.Point(32, 154);
             this.r2_label.Name = "r2_label";
             this.r2_label.Size = new System.Drawing.Size(56, 24);
             this.r2_label.TabIndex = 1;
             this.r2_label.Text = "r^2 = ";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(31, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(304, 25);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Коэффициент детерминации";
+            // 
             // CorrelationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 504);
+            this.ClientSize = new System.Drawing.Size(1088, 542);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.show_regress);
@@ -201,6 +213,7 @@
             this.Controls.Add(this.comparison_t);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hyp_test);
@@ -232,5 +245,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label r2_label;
+        private System.Windows.Forms.Label label7;
     }
 }
